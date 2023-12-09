@@ -1,0 +1,9 @@
+.cardstyle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+table,tr.td{
+    border: 1px solid black;
+}
