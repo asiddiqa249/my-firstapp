@@ -17,6 +17,9 @@ import HeaderComp from "./components/4_12_23/header";
 import FooterComp from "./components/4_12_23/footer";
 import ButtonPropComponent, { ButtonPropComponent1 } from "./components/29_11_23/props";
 import TxtComp from "./components/29_11_23/text";
+import PureComponent1 from "./components/7_12_23/purecompo";
+import ListComponent from "./components/7_12_23/list";
+import UseState from "./components/9_12_23/usestate";
 // import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
 function App() {
   function getDay(day) {
@@ -306,14 +309,18 @@ function App() {
     // </div>
 
     <div>
-      <ButtonPropComponent text="login" bgcolor="blue" color="white"/>
+      {/* <ButtonPropComponent text="login" bgcolor="blue" color="white"/>
       <ButtonPropComponent text="signup" bgcolor="pink" color="black" />
-      
       <TxtComp>
         Hello
       </TxtComp>
-      {/* <ButtonPropComponent1/> */}
+      <ButtonPropComponent1/>
+      <PureComponent1 />
+      
+      <ListComponent /> */}
+      <UseState/>
     </div>
+
   );
   
 }

@@ -16,8 +16,8 @@ const ButtonPropComponent = ({bgcolor="red", text="hello", color="black"}) => {
 };
 export default ButtonPropComponent;
 
-// export const ButtonPropComponent1 = () => {
-//     return (
-//         <button onClick={()=>{alert("clicked")}}>Signup</button>
-//     )
-// }
+export const ButtonPropComponent1 = () => {
+    return (
+        <button onClick={()=>{alert("clicked")}}>Signup</button>
+    )
+}
