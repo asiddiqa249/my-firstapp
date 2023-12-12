@@ -20,6 +20,9 @@ import TxtComp from "./components/29_11_23/text";
 import PureComponent1 from "./components/7_12_23/purecompo";
 import ListComponent from "./components/7_12_23/list";
 import UseState from "./components/9_12_23/usestate";
+import UseState2 from "./components/9_12_23/timer";
+import Uncontrolled from "./components/11_12_23/forms";
+import Controlled from "./components/11_12_23/controlled";
 // import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
 function App() {
   function getDay(day) {
@@ -316,11 +319,13 @@ function App() {
       </TxtComp>
       <ButtonPropComponent1/>
       <PureComponent1 />
-      
-      <ListComponent /> */}
-      <UseState/>
+       */}
+      {/* <ListComponent />
+      <UseState />
+      <UseState2 /> */}
+      {/* <Uncontrolled/> */}
+      <Controlled/>
     </div>
-
   );
   
 }

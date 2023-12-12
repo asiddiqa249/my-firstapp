@@ -22,6 +22,51 @@ class ListComponent extends Component {
           name: "Pravalika",
           designation: "JS",
         },
+        {
+          id: "4",
+          name: "Akhil",
+          designation: "React",
+        },
+        {
+          id: "5",
+          name: "Karthik",
+          designation: "Angular",
+        },
+        {
+          id: "6",
+          name: "Lavan",
+          designation: "JS",
+        },
+        {
+          id: "7",
+          name: "Pranathi",
+          designation: "React",
+        },
+        {
+          id: "8",
+          name: "Suraj",
+          designation: "Angular",
+        },
+        {
+          id: "9",
+          name: "Pallavi",
+          designation: "JS",
+        },
+        {
+          id: "10",
+          name: "Bhavani",
+          designation: "React",
+        },
+        {
+          id: "11",
+          name: "Srilekha",
+          designation: "Angular",
+        },
+        {
+          id: "12",
+          name: "Sai Shiva",
+          designation: "JS",
+        },
       ],
       filteredList: [],
     };
@@ -50,19 +95,23 @@ class ListComponent extends Component {
 
     return (
       <>
-        <table>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Designation</th>
-          </tr>
-          {data.map((val) => (
-            <tr key={val.id}>
-              <td>{val.id}</td>
-              <td>{val.name}</td>
-              <td>{val.designation}</td>
+        <table className="table table-bordered border-black w-50">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Designation</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {data.map((val) => (
+              <tr key={val.id}>
+                <td>{val.id}</td>
+                <td>{val.name}</td>
+                <td>{val.designation}</td>
+              </tr>
+            ))} 
+          </tbody>
         </table>
         <button onClick={() => this.handleClick("React")}>React</button>
         <button onClick={() => this.handleClick("Angular")}>Angular</button>
