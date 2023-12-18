@@ -23,6 +23,10 @@ import UseState from "./components/9_12_23/usestate";
 import UseState2 from "./components/9_12_23/timer";
 import Uncontrolled from "./components/11_12_23/forms";
 import Controlled from "./components/11_12_23/controlled";
+import Registration from "./components/11_12_23/registration";
+import DemoCarousel from "./components/carousel/carousel";
+import Todo from "./components/12_12_23/todolist";
+import NavigationStack from "./navigationStack/navigationStack";
 // import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
 function App() {
   function getDay(day) {
@@ -206,13 +210,14 @@ function App() {
     // </div>
 
     // <div>
-    //   <TextComponent>
-    //     {/* hello */}
+    //   {/* <TextComponent>
+    //     hello
     //     <p>hello Everyone</p>
     //     <p>How are you?</p>
-    //   </TextComponent>
-    //   <ApiComponent />
-    //   <CarouselComponent/>
+    //   </TextComponent> */}
+    //   {/* <ApiComponent />
+    //   <CarouselComponent /> */}
+    //   <DemoCarousel/>
     // </div>
 
     // <div>
@@ -324,7 +329,10 @@ function App() {
       <UseState />
       <UseState2 /> */}
       {/* <Uncontrolled/> */}
-      <Controlled/>
+      {/* <Controlled /> */}
+      {/* <Registration /> */}
+      {/* <Todo/> */}
+      <NavigationStack/>
     </div>
   );
   

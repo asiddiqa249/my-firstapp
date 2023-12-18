@@ -33,7 +33,7 @@ const Uncontrolled = () => {
           alert(resp.message);
         } else {
           alert("login success");
-          localStorage.setItem("userDetails", JSON.stringify(userDetails));
+          localStorage.getItem("userDetails", JSON.stringify(userDetails));
         }
       });
   };
