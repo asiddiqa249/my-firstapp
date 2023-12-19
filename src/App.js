@@ -325,8 +325,8 @@ function App() {
       <ButtonPropComponent1/>
       <PureComponent1 />
        */}
-      {/* <ListComponent />
-      <UseState />
+      {/* <ListComponent /> */}
+      {/* <UseState />
       <UseState2 /> */}
       {/* <Uncontrolled/> */}
       {/* <Controlled /> */}
