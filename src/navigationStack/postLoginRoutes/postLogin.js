@@ -9,10 +9,10 @@ const PostLoginRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/" Component={HomeScreen} />
+        <Route path="/home" Component={HomeScreen} />
         <Route path="/about" Component={AboutScreen} />
         <Route path="/settings" Component={SettingScreen} />
-        <Route path="*" Component={InvalidScreen} />
+        {/* <Route path="*" Component={InvalidScreen} /> */}
         <Route path="/product/:id/:id" Component={ProductDetail} />
       </Routes>
     </>

@@ -25,7 +25,7 @@ const Registration = () => {
       address:address,
     };
     console.log(details);
-    fetch("https://dummyjson.com/auth/login", {
+    fetch("https://dummyjson.com/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(

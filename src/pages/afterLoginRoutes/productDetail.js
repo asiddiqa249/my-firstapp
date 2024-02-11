@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 function ProductDetail() {
     const cardStyle = {
@@ -13,7 +13,10 @@ function ProductDetail() {
     };
     const urlId = useParams()
     // console.log(urlId)
-    const [productDetail,setProductDetails]= useState({})
+    const [productDetail, setProductDetails] = useState({})
+    useEffect(() => {
+        handleProduct()
+    },[])
     const handleProduct = () => {
         axios
           .get(`https://fakestoreapi.com/products/${urlId.id}`)
@@ -21,7 +24,7 @@ function ProductDetail() {
     }
   return (
     <div>
-      <button onClick={handleProduct}>See Product</button>
+      {/* <button onClick={handleProduct}>See Product</button> */}
       {Object.keys(productDetail).length > 0 && (
         <>
           <div style={cardStyle}>

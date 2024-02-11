@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useState } from "react";
+import { LoginInfo } from "../navigationStack/navigationStack";
+import { useNavigate } from "react-router-dom";
 function RegistrationScreen() {
    const [user, setUser] = useState("");
    const [userError, setUserError] = useState("");
@@ -12,8 +14,9 @@ function RegistrationScreen() {
    const [gender, setGender] = useState("");
    const [genderError, setGenderError] = useState("");
    const [address, setAddress] = useState("");
-   const [addressError, setAddressError] = useState("");
-
+  const [addressError, setAddressError] = useState("");
+  const RegDetails = useContext(LoginInfo); 
+  const navigate=useNavigate()
    const handleSubmit = (e) => {
      e.preventDefault();
      const details = {
@@ -25,7 +28,7 @@ function RegistrationScreen() {
        address: address,
      };
      console.log(details);
-     fetch("https://dummyjson.com/auth/login", {
+     fetch("http://localhost:3001/posts", {
        method: "POST",
        headers: { "Content-Type": "application/json" },
        body: JSON.stringify(
@@ -43,7 +46,9 @@ function RegistrationScreen() {
            alert(resp.message);
          } else {
            alert("login success");
-           localStorage.setItem("userDetails", JSON.stringify(details));
+           RegDetails.signIn();
+           navigate("/login");
+           //  localStorage.setItem("userDetails", JSON.stringify(details));
          }
        });
      // localStorage.setItem("userDetails",JSON.stringify(details))
@@ -51,40 +56,40 @@ function RegistrationScreen() {
    const userHandler = (e) => {
      setUser(e.target.value);
      // console.log(e.target.value);
-     if (e.target.value.length > 8) {
-       setUserError("please enter username lessthan 8 characters");
-     } else {
-       setUserError("");
-     }
+    //  if (e.target.value.length > 8) {
+    //    setUserError("please enter username lessthan 8 characters");
+    //  } else {
+    //    setUserError("");
+    //  }
    };
    const emailHandler = (e) => {
      setEmail(e.target.value);
-     const format = /^[\w]+@[\w]+\.[\w]+$/;
-     if (!format.test(e.target.value)) {
-       setEmailError("In valid Email Formate");
-     } else {
-       setEmailError("");
-     }
+    //  const format = /^[\w]+@[\w]+\.[\w]+$/;
+    //  if (!format.test(e.target.value)) {
+    //    setEmailError("In valid Email Formate");
+    //  } else {
+    //    setEmailError("");
+    //  }
    };
    const passHandler = (e) => {
      setPassword(e.target.value);
-     const passFormat =
-       /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
-     if (!passFormat.test(e.target.value)) {
-       setPassswordError("Write the Strong password");
-     } else {
-       setPassswordError("");
-     }
+    //  const passFormat =
+    //    /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+    //  if (!passFormat.test(e.target.value)) {
+    //    setPassswordError("Write the Strong password");
+    //  } else {
+    //    setPassswordError("");
+    //  }
    };
    const confirmPassHandler = (e) => {
      setConfirmPass(e.target.value);
-     const cPFormat =
-       /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
-     if (!cPFormat.test(e.target.value)) {
-       setConfirmPassError("Confirm password is not same as password");
-     } else {
-       setConfirmPassError("");
-     }
+    //  const cPFormat =
+    //    /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+    //  if (!cPFormat.test(e.target.value)) {
+    //    setConfirmPassError("Confirm password is not same as password");
+    //  } else {
+    //    setConfirmPassError("");
+    //  }
    };
    const genderHandler = (e) => {
      setGender(e.target.value);
@@ -93,7 +98,7 @@ function RegistrationScreen() {
      } else {
        setGenderError("");
      }
-   };
+   }
    const addressHandler = (e) => {
      setAddress(e.target.value);
      if (!e.target.value) {
@@ -113,17 +118,15 @@ function RegistrationScreen() {
              <div className="col">
                <label
                  htmlFor="inputUsername4"
-                 style={{ color: "black", fontSize: "18px" }}
-               >
+                 style={{ color: "black", fontSize: "18px" }}>
                  Username
                </label>
                <input
                  type="text"
-                 className="form-control border-black"
+                 className="form-control w-50 border-black"
                  placeholder="Username"
                  value={user}
-                 onChange={userHandler}
-               />
+                 onChange={userHandler}/>
                <label htmlFor="inputUsername4" style={{ color: "red" }}>
                  {userError}
                </label>
@@ -151,8 +154,7 @@ function RegistrationScreen() {
            <div className="form-group col-md-6">
              <label
                htmlFor="inputPassword4"
-               style={{ color: "black", fontSize: "18px" }}
-             >
+               style={{ color: "black", fontSize: "18px" }}>
                Password
              </label>
              <input
@@ -210,8 +212,7 @@ function RegistrationScreen() {
                defaultValue="option2"
                value="Female"
                onChange={genderHandler}
-               required
-             />
+               required/>
              <label className="form-check-label" htmlFor="inlineRadio2">
                Female
              </label>
@@ -240,8 +241,7 @@ function RegistrationScreen() {
              <div className="form-group col-md-4">
                <label
                  htmlFor="inputState"
-                 style={{ color: "black", fontSize: "18px" }}
-               >
+                 style={{ color: "black", fontSize: "18px" }}>
                  State
                </label>
                <select

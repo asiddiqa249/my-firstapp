@@ -1,0 +1,172 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "Deepthi",
+      "email": "gdeepthi0@gmail.com",
+      "password": "Deepthi@123",
+      "confirmPassword": "Deepthi@123",
+      "gender": "Female",
+      "address": "Andhra Pradesh",
+      "id": 2
+    },
+    {
+      "username": "deepthi",
+      "email": "gdeepthi0@gmail.com",
+      "password": "Deepthi@123",
+      "confirmPassword": "Deepthi@123",
+      "gender": "Female",
+      "address": "Andhra Pradesh",
+      "id": 3
+    },
+    {
+      "username": "deepthi",
+      "email": "Deepthi@gmail.cpom",
+      "password": "Deepthi@123",
+      "confirmPassword": "Deepthi@123",
+      "gender": "Female",
+      "address": "Andhra Pradesh",
+      "id": 4
+    },
+    {
+      "username": "deepthi",
+      "email": "Deepthi@gmail.cpom",
+      "password": "Deepthi@123",
+      "confirmPassword": "Deepthi@123",
+      "gender": "Female",
+      "address": "Andhra Pradesh",
+      "id": 5
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 6
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 7
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 8
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 9
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@1010",
+      "confirmPassword": "Ayesha@1010",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 10
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@1010",
+      "confirmPassword": "Ayesha@1010",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 11
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 12
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 13
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 14
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 15
+    },
+    {
+      "username": "ayesha",
+      "email": "asiddiqa249@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "address": "Telangana",
+      "id": 16
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 17
+    },
+    {
+      "username": "Ayesha",
+      "email": "a@gmail.com",
+      "password": "Ayesha@123",
+      "confirmPassword": "Ayesha@123",
+      "gender": "Female",
+      "address": "Telangana",
+      "id": 18
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

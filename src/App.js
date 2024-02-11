@@ -27,88 +27,95 @@ import Registration from "./components/11_12_23/registration";
 import DemoCarousel from "./components/carousel/carousel";
 import Todo from "./components/12_12_23/todolist";
 import NavigationStack from "./navigationStack/navigationStack";
-// import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
+import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
+import { createContext, useState } from "react";
+import UseEffect from "./components/PractiseHooks/UseEffect";
+import UseRef from "./components/PractiseHooks/UseRef";
+
+export const UserContext=createContext()
 function App() {
-  function getDay(day) {
-    switch (day) {
-      case 0:
-        return "Sunday";
-      case 1:
-        return "Monday";
-      case 2:
-        return "Tuesday";
-      case 3:
-        return "Wednesday";
-      case 4:
-        return "Thursday";
-      case 5:
-        return "Friday";
-      case 6:
-        return "Saturday";
-      default:
-        return "None"
-    }
-  }
-  function getHour(Time) {
-    let greet;
-    if (Time > 0 && Time < 12) {
-      greet="Good Morning"
-    } else if (Time >= 12 && Time < 16) {
-      greet="Good afternoon"
-    } else if (Time >= 16 && Time < 20) {
-      greet = "Good Evening"
-    } else {
-      greet="Good Night"
-    }
-    return greet;
-  }
-  function getMnth(Month) {
-    switch (Month) {
-      case 0:
-        return "January";
-      case 1:
-        return "February";
-      case 2:
-        return "March";
-      case 3:
-        return "April";
-      case 4:
-        return "May";
-      case 5:
-        return "June";
-      case 6:
-        return "July";
-      case 7:
-        return "August";
-      case 8:
-        return "September";
-      case 9:
-        return "October";
-      case 10:
-        return "November";
-      case 11:
-        return "December";
-      default:
-        return "None"
-    }
-  }
-  function getSeason(Season) {
-    if (Season >= 1 && Season < 3) {
-      return "winter"
-    } else if (Season >= 3 && Season < 7) {
-      return "Summer"
-    } else if (Season >= 7 && Season < 10) {
-      return "Rainy"
-    } else {
-      return "Monsoon"
-    }
-  }
-  const randColor = () => {
-    let rcolor = Math.floor(Math.random() * 16777215).toString(16);
-    return `#${rcolor}`
+
+  const [context,setContext]=useState("user")
+  // function getDay(day) {
+  //   switch (day) {
+  //     case 0:
+  //       return "Sunday";
+  //     case 1:
+  //       return "Monday";
+  //     case 2:
+  //       return "Tuesday";
+  //     case 3:
+  //       return "Wednesday";
+  //     case 4:
+  //       return "Thursday";
+  //     case 5:
+  //       return "Friday";
+  //     case 6:
+  //       return "Saturday";
+  //     default:
+  //       return "None"
+  //   }
+  // }
+  // function getHour(Time) {
+  //   let greet;
+  //   if (Time > 0 && Time < 12) {
+  //     greet="Good Morning"
+  //   } else if (Time >= 12 && Time < 16) {
+  //     greet="Good afternoon"
+  //   } else if (Time >= 16 && Time < 20) {
+  //     greet = "Good Evening"
+  //   } else {
+  //     greet="Good Night"
+  //   }
+  //   return greet;
+  // }
+  // function getMnth(Month) {
+  //   switch (Month) {
+  //     case 0:
+  //       return "January";
+  //     case 1:
+  //       return "February";
+  //     case 2:
+  //       return "March";
+  //     case 3:
+  //       return "April";
+  //     case 4:
+  //       return "May";
+  //     case 5:
+  //       return "June";
+  //     case 6:
+  //       return "July";
+  //     case 7:
+  //       return "August";
+  //     case 8:
+  //       return "September";
+  //     case 9:
+  //       return "October";
+  //     case 10:
+  //       return "November";
+  //     case 11:
+  //       return "December";
+  //     default:
+  //       return "None"
+  //   }
+  // }
+  // function getSeason(Season) {
+  //   if (Season >= 1 && Season < 3) {
+  //     return "winter"
+  //   } else if (Season >= 3 && Season < 7) {
+  //     return "Summer"
+  //   } else if (Season >= 7 && Season < 10) {
+  //     return "Rainy"
+  //   } else {
+  //     return "Monsoon"
+  //   }
+  // }
+  // const randColor = () => {
+  //   let rcolor = Math.floor(Math.random() * 16777215).toString(16);
+  //   return `#${rcolor}`
       
     
-  }
+  // }
   
 
   
@@ -165,6 +172,7 @@ function App() {
     //     />
     //   </div> */}
 
+    
     //   {/* <LoginComponent/> */}
     //   {/*<UnOrderedList />
     //    <OrderedList />
@@ -174,7 +182,7 @@ function App() {
     //   {/* <table border="1px solid black" cellPadding="5px" cellSpacing="0px">
     //      <tr>
     //        <th>Sl.no</th>
-    //        <th>Name</th>
+    //        <th>Context</th>
     //        <th>Group</th>
     //      </tr>
     //      <tr>
@@ -332,7 +340,11 @@ function App() {
       {/* <Controlled /> */}
       {/* <Registration /> */}
       {/* <Todo/> */}
-      <NavigationStack/>
+      {/* <UserContext.Provider value={context}>
+        <NavigationStack />
+      </UserContext.Provider> */}
+      <UseEffect /><br/>
+      <UseRef/>
     </div>
   );
   

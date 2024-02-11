@@ -8,10 +8,10 @@ const PreLoginRoutes = () => {
     return (
       <>
         <Routes>
-          <Route path="/" Component={LoginScreen} />
-          <Route path="/register" Component={RegistrationScreen} />
+          <Route path="/" Component={RegistrationScreen} />
+          <Route path="/login" Component={LoginScreen} />
           <Route path="/forgot-password" Component={ForgotPasswordScreen} />
-          <Route path="*" Component={InvalidScreen} />
+          {/* <Route path="*" Component={InvalidScreen} /> */}
         </Routes>
       </>
     );

@@ -1,6 +1,6 @@
 import axios from "axios";
 import Navbar from "../../components/15_12_23/navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
@@ -8,8 +8,8 @@ const HomeScreen = () => {
       border: "2px solid black",
       borderRadius: "5px",
       margin: "1%",
-      padding: "1%",
-      width: "18rem",
+      padding: "2%",
+      width: "20rem",
       textAlign: "center",
       backgroundColor: "#e3f2fd",
       overflow: "hidden", 
@@ -25,49 +25,84 @@ const HomeScreen = () => {
     alignContent:"center"
 };
 
-  const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        handleClick()
+    },[])
   const handleClick = () => {
     // api
     axios
       .get("https://fakestoreapi.com/products")
       .then((response) => setData(response.data));
   };
+  
   return (
     <>
       <Navbar />
-      <h2>Hello i'm home screen</h2>
-      <button onClick={handleClick}>See products</button>
+      {/* <div>
+        <button onClick={}>Mens</button>
+      </div> */}
+      {/* <h2>Hello i'm home screen</h2> */}
+      {/* <button onClick={handleClick}>See products</button> */}
       <div style={mainDiv}>
         {data.length > 0 ? (
           data.map((element) => {
             return (
               <div key={element.id}>
                 <div style={divStyle}>
-                  <p>{element.title}</p>
                   <img
                     src={element.image}
                     alt="..."
                     style={{
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "10px",
-                    }}/>
-                  <br/>
-                  <button style={{
-                      marginTop: "10px",
                       width: "100%",
+                      height: "200px",
+                      borderRadius: "10px",
+                    }}
+                  />
+                  <br />
+                  <h5>{element.category}</h5>
+                  <p>{element.title}</p>
+                  <button
+                    style={{
+                      marginTop: "10px",
+                      width: "40%",
                       padding: "1%",
                       borderRadius: "10px",
                       backgroundColor: "skyblue",
-                      }}>
-                      <Link
+                      marginRight: "1%",
+                    }}
+                  >
+                    <Link
                       to={`/product/${element.category}/${element.id}`}
                       style={{
                         textDecoration: "none",
                         fontSize: "1rem",
                         color: "black",
-                      }}>
-                      See More</Link>
+                        marginBottom: "1%",
+                      }}
+                    >
+                      See More
+                    </Link>
+                  </button>
+                  <button
+                    style={{
+                      marginTop: "10px",
+                      width: "40%",
+                      padding: "1%",
+                      borderRadius: "10px",
+                      backgroundColor: "skyblue",
+                    }}
+                  >
+                    <Link
+                      to={`/product/${element.category}/${element.id}`}
+                      style={{
+                        textDecoration: "none",
+                        fontSize: "1rem",
+                        color: "black",
+                      }}
+                    >
+                      Add to cart
+                    </Link>
                   </button>
                 </div>
               </div>
