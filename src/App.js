@@ -1,5 +1,7 @@
 import ButtonComponent from "./components/button/class/button-component";
-import ButtonComponentFun, { LoginComponent } from "./components/button/functional/button-component-fun";
+import ButtonComponentFun, {
+  LoginComponent,
+} from "./components/button/functional/button-component-fun";
 import DateComp, { BtnComponent } from "./components/Date/date";
 import CarouselComponent from "./components/carousel/carousel";
 import TextComponent from "./components/text/textcomponent";
@@ -15,7 +17,9 @@ import SlideCarousel from "./components/1_12_23/carousel";
 import BootstrapCard from "./components/4_12_23/bootstrapcard";
 import HeaderComp from "./components/4_12_23/header";
 import FooterComp from "./components/4_12_23/footer";
-import ButtonPropComponent, { ButtonPropComponent1 } from "./components/29_11_23/props";
+import ButtonPropComponent, {
+  ButtonPropComponent1,
+} from "./components/29_11_23/props";
 import TxtComp from "./components/29_11_23/text";
 import PureComponent1 from "./components/7_12_23/purecompo";
 import ListComponent from "./components/7_12_23/list";
@@ -27,15 +31,33 @@ import Registration from "./components/11_12_23/registration";
 import DemoCarousel from "./components/carousel/carousel";
 import Todo from "./components/12_12_23/todolist";
 import NavigationStack from "./navigationStack/navigationStack";
-import BootstrapComponent, { FormComponent, HeadingComponent, ParagraphComponent, TableComp } from "./components/card/card";
+import BootstrapComponent, {
+  FormComponent,
+  HeadingComponent,
+  ParagraphComponent,
+  TableComp,
+} from "./components/card/card";
 import { createContext, useState } from "react";
 import UseEffect from "./components/PractiseHooks/UseEffect";
 import UseRef from "./components/PractiseHooks/UseRef";
+import Parent from "./components/practise-mock/parent";
+import UseMemo from "./components/PractiseHooks/UseMemo";
+import UseCallback from "./components/PractiseHooks/UseCallback";
+import UseReducer from "./components/PractiseHooks/UseReducer";
+import { CustomHook } from "./components/PractiseHooks/CustomHook1";
+import { Validation } from "./components/PractiseForms/InputValidation";
+import { EmailValidation } from "./components/PractiseForms/Controlled";
+import ParentComponent from "./components/StateLifting/parent";
+import { Interval } from "./components/practice-Interval/setInterval";
+import { Routing } from "./components/Practice-routing/Routes";
+import { BrowserRouter, Route, Router, Routes, Switch } from "react-router-dom";
+import { Home } from "./components/Practice-routing/Home";
+import { Contact } from "./components/Practice-routing/Contact";
+import { CounterComp } from "./components/ClassBasedPractice/ClassBased";
 
-export const UserContext=createContext()
+export const UserContext = createContext();
 function App() {
-
-  const [context,setContext]=useState("user")
+  const [context, setContext] = useState("user");
   // function getDay(day) {
   //   switch (day) {
   //     case 0:
@@ -113,12 +135,9 @@ function App() {
   // const randColor = () => {
   //   let rcolor = Math.floor(Math.random() * 16777215).toString(16);
   //   return `#${rcolor}`
-      
-    
-  // }
-  
 
-  
+  // }
+
   return (
     // <div>
     //   <h1>Hello world</h1>
@@ -172,7 +191,6 @@ function App() {
     //     />
     //   </div> */}
 
-    
     //   {/* <LoginComponent/> */}
     //   {/*<UnOrderedList />
     //    <OrderedList />
@@ -343,11 +361,31 @@ function App() {
       {/* <UserContext.Provider value={context}>
         <NavigationStack />
       </UserContext.Provider> */}
-      <UseEffect /><br/>
-      <UseRef/>
+      {/* <UseEffect /><br/> */}
+      {/* <UseRef/> */}
+      {/* <Parent /> */}
+      {/* <UseMemo />
+      <UseCallback />
+      <UseReducer />
+     <CustomHook/> */}
+      {/* <Validation /> */}
+      {/* <EmailValidation /> */}
+      {/* <ParentComponent /> */}
+      {/* <Interval /> */}
+      {/* <Routing /> */}
+      {/* <Router>
+        <div>
+          <Routing />
+          <hr />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router> */}
+      <CounterComp />
     </div>
   );
-  
 }
 
 export default App;

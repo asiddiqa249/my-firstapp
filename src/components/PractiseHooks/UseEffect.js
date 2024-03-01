@@ -1,22 +1,22 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 const UseEffect = () => {
-//   const [data, setData] = useState([]);
-const [count,setCount]=useState(0)
+  const [data, setData] = useState([]);
+// const [count,setCount]=useState(0)
   useEffect(() => {
       handleLoad();
   }, []);
 
   const handleLoad = () => {
-    // axios
-    //   .get("https://fakestoreapi.com/products/")
-    //   .then((res) => setData(res.data));
-    setCount(count+1)
+    axios
+      .get("https://fakestoreapi.com/products/")
+      .then((res) => setData(res.data));
+    // setCount(count+1)
   };
   return (
     <>
-          <h1>count: {count}</h1>
-      {/* <div>
+      {/* <h1>count: {count}</h1> */}
+      <div>
         {data.length > 0 ? 
         (
           data.map((ele) => {
@@ -30,8 +30,8 @@ const [count,setCount]=useState(0)
             );
           })
         ) : (<h2>no products</h2>)}
-      </div> */}
-      <button onClick={handleLoad}>increment</button>
+      </div>
+      {/* <button onClick={handleLoad}>increment</button> */}
     </>
   );
 };
