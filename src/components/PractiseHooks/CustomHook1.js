@@ -7,11 +7,18 @@ const useCustom = (count) => {
   }, [count]);
 };
 export const CustomHook = () => {
-    const [count, setCount] = useState(0);
-    useCustom(count)
-    return (
-        <>
-            <button onClick={() => { setCount(count + 1) }}>count { count}</button>
-        </>
-    )
-}
+  const [count, setCount] = useState(0);
+  useCustom(count);
+  return (
+    <>
+      <h1>count:{count}</h1>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        count {count}
+      </button>
+    </>
+  );
+};

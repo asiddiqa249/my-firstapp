@@ -8,9 +8,9 @@ export const Validation = () => {
     let y = Input1.current.value;
     // console.log(y)
     if (x > y) {
-      console.log(x);
+      alert(x);
     } else {
-      console.log(y);
+      alert(y);
     }
   };
   return (

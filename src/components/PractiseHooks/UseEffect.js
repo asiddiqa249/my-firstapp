@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 const UseEffect = () => {
   const [data, setData] = useState([]);
-// const [count,setCount]=useState(0)
+  // const [count,setCount]=useState(0)
   useEffect(() => {
-      handleLoad();
+    handleLoad();
   }, []);
 
   const handleLoad = () => {
@@ -17,19 +17,24 @@ const UseEffect = () => {
     <>
       {/* <h1>count: {count}</h1> */}
       <div>
-        {data.length > 0 ? 
-        (
+        {data.length > 0 ? (
           data.map((ele) => {
             return (
               <div key={ele.id}>
                 <div>
-                  <img src={ele.image} alt=".." style={{width:"100px",height:"100px"}} />
+                  <img
+                    src={ele.image}
+                    alt=".."
+                    style={{ width: "100px", height: "100px" }}
+                  />
                   <p>{ele.title}</p>
                 </div>
               </div>
             );
           })
-        ) : (<h2>no products</h2>)}
+        ) : (
+          <h2>no products</h2>
+        )}
       </div>
       {/* <button onClick={handleLoad}>increment</button> */}
     </>

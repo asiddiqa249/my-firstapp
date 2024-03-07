@@ -361,13 +361,14 @@ function App() {
       {/* <UserContext.Provider value={context}>
         <NavigationStack />
       </UserContext.Provider> */}
-      {/* <UseEffect /><br/> */}
+      {/* <UseEffect /> */}
+      <br />
       {/* <UseRef/> */}
       {/* <Parent /> */}
       {/* <UseMemo />
       <UseCallback />
-      <UseReducer />
-     <CustomHook/> */}
+      <UseReducer /> */}
+      <CustomHook />
       {/* <Validation /> */}
       {/* <EmailValidation /> */}
       {/* <ParentComponent /> */}
@@ -383,7 +384,7 @@ function App() {
           </Routes>
         </div>
       </Router> */}
-      <CounterComp />
+      {/* <CounterComp /> */}
     </div>
   );
 }

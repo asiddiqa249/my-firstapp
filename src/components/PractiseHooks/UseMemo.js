@@ -2,17 +2,23 @@ import React, { useMemo } from "react";
 import { useState } from "react";
 
 const UseMemo = () => {
-    const [count, setCount] = useState(0)
-    const squaredValue = useMemo(() => {
-        console.log("squared value is");
-        return count * count;
-    }, [count])
-    return (
-        <>
-            <p>count: {count}</p>
-            <p>{squaredValue}</p>
-            <button onClick={()=>{setCount(count+1)}}>Increment</button>
-        </>
-    )
-}
+  const [number, setNumber] = useState(0);
+  const squaredValue = useMemo(() => {
+    console.log("squared value is");
+    return number * number;
+  }, [number]);
+  return (
+    <>
+      <p>number: {number}</p>
+      <p>{squaredValue}</p>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+        }}
+      >
+        Increment
+      </button>
+    </>
+  );
+};
 export default UseMemo;
